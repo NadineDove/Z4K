@@ -473,7 +473,7 @@ $ kubectl annotate pod <ingress_pod_id> -n <namespace> vpg=<vpg_id>
 pod/ingress-nginx-2-controller-6dcb748f9-7z6bz annotated
 ```	
 
-### Protecting Ingress Controller Resources
+### Displaying Ingress Controller Protected Resources
 
 To display Ingress controller annotation run the following command:
 ```	
@@ -483,7 +483,7 @@ $ kubectl get pod <ingress_pod_id> -n <namespace> -o json | jq .metadata.annotat
   "vpg": "website-vpg1"
 }
 ```	
-*Example output for checking VPG configuration with Ingress controller protected*
+*Example output showing  ingress controller protected VPG configuration*
 ```
 $ kubectl get vpg -n <namespace>
   NAME         STATE      SYNC   SOURCE TARGET STATEFULSETS DEPLOYMENTS SERVICES CONFIGMAPS SECRETS INGRESSES NUMCP RPO       JOURNALHISTORY JOURNALSIZEMB
